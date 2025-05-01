@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { assets } from "../assets/assets";
 import { NavLink, Link } from "react-router-dom";
 function Navbar() {
+
+const[visible,setvisible]=useState(false);
+
   return (
     <div className="flex  items-center justify-between py-5 font-medium">
       <img src={assets.logo} className="w-36" alt="" />
@@ -66,8 +69,25 @@ function Navbar() {
           <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px] ">
             10
           </p>
+
         </Link>
+        <img onClick={()=>setvisible(true)} src={assets.menu_icon} className="   " alt="" />
       </div>
+     {/*menu bar the small class*/}
+
+      <div className={`absolute top-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? `w-full`:`w-0`}`}>
+
+  <div className="flex flex-col text-gray-600 cursor-pointer"></div>
+           <div onClick={()=>setvisible(false)} className="flex item-center gap-4 p-3">
+
+            <img src={assets.dropdown_icon} className='h-4 rotate-180' alt="" />
+            <h1 className="top-[-3px]">Back</h1>
+           </div>
+           
+      </div>
+
+
+
     </div>
   );
 }
