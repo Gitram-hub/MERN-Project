@@ -71,7 +71,7 @@ const[visible,setvisible]=useState(false);
           </p>
 
         </Link>
-        <img onClick={()=>setvisible(true)} src={assets.menu_icon} className="   " alt="" />
+        <img onClick={()=>setvisible(true)} src={assets.menu_icon} className=" cursor-pointer  " alt="" />
       </div>
      {/*menu bar the small class*/}
 
@@ -80,8 +80,8 @@ const[visible,setvisible]=useState(false);
   <div className="flex flex-col text-gray-600 cursor-pointer"></div>
            <div onClick={()=>setvisible(false)} className="flex item-center gap-4 p-3">
 
-            <img src={assets.dropdown_icon} className='h-4 rotate-180' alt="" />
-            <h1 className="top-[-3px]">Back</h1>
+            <img src={assets.dropdown_icon} className='h-4 rotate-180 m-[5px]' alt="" />
+            <h1 className="top-[-4px] cursor-pointer text-red-700 ">Back</h1>
            </div>
            
       </div>
