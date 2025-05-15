@@ -1,13 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Hero from '../components/Hero'
 
 function Home() {
   return (
     <div>
-      <h1>hey i want to play cricket</h1>
-      <li>
-        
-      </li>
+     <Hero/>
     </div>
   )
 }
