@@ -8,7 +8,7 @@ const[visible,setvisible]=useState(false);
 
   return (
     <div className="flex  items-center justify-between py-5 font-medium">
-      <img src={assets.logo} className="w-36" alt="" />
+     <Link to="/"> <img src={assets.logo} className="w-36" alt="" /></Link>
       <ul className="hidden sm:flex gap-5 test-sm text-gray-700">
         <NavLink
           to="/"
