@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import Collection from './pages/Collection';
 import Contact from './pages/Contact.jsx'; 
 import Navbar from './components/Navbar.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   return (
@@ -29,8 +30,10 @@ function App() {
           <Route path='/placeorder' element={<PlaceOrder />} />
           <Route path='/orders' element={<Order />} />
         </Routes>
+       <Footer/>
       </div>
     </Router>
+   
   );
 }
 
