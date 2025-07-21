@@ -6,16 +6,15 @@ import ProductItem from './productitem';
 function Latestcol() {
     const{products}=useContext(Shop);
     const [latest,setlatest]=useState([]);
-    useEffect(()=>
-    {
-          setlatest (products.slice(0,10));
-    },[])
+    useEffect(() => {
+        setlatest(products.slice(0, 10));
+    }, [products]);
    
   return (
     <div className='my-10'>
       <div className='text-center py-8 text-3xl'>
 
-        <Title  text1={"LATEST"} text2={"COLLECTION "}/ >
+        <Title text1={"LATEST"} text2={"COLLECTION "} />
         <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-700'>
 
 
