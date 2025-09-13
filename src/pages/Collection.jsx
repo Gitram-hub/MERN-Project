@@ -35,7 +35,17 @@ function Collection() {
       productsCopy = productsCopy.filter(item =>
         category.map(cat => cat.toLowerCase()).includes(item.category.toLowerCase())
       );
+
     }
+    if (subcategory.length > 0) {
+    productsCopy = productsCopy.filter(item =>
+  subcategory.map(sub => sub.toLowerCase()).includes(item.subcategory?.toLowerCase())
+);
+
+       }
+       console.log(productsCopy);
+       
+
     seteFilterproducts(productsCopy);
   }
   useEffect(()=>
@@ -44,10 +54,7 @@ function Collection() {
   },[category,subcategory])
 
   useEffect(() => {
-    seteFilterproducts(products);
-  }, []);
-  useEffect(() => {
-    console.log(subcategory);
+    // console.log(subcategory);
   }, [subcategory]);
 
   return (
