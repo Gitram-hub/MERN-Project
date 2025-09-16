@@ -13,7 +13,7 @@ function Collection() {
   const [subcategory, setsubcategory] = useState([]);
 
 
-  // Removed unused subcategory state
+ 
   const toggleCategory = (e) => {
     if (category.includes(e.target.value)) {
       setcategory((prev) => prev.filter((item) => item != e.target.value));
@@ -37,10 +37,11 @@ function Collection() {
       );
 
     }
-    if (subcategory.length > 0) {
-    productsCopy = productsCopy.filter(item =>
-  subcategory.map(sub => sub.toLowerCase()).includes(item.subcategory?.toLowerCase())
-);
+if (subcategory.length > 0) {
+  productsCopy = productsCopy.filter(item =>
+    item.subcategory &&
+    subcategory.map(sub => sub.toLowerCase()).includes(item.subcategory.toLowerCase())
+  );
 
        }
        console.log(productsCopy);
