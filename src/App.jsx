@@ -12,12 +12,14 @@ import Collection from './pages/Collection';
 import Contact from './pages/Contact.jsx'; 
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
+import SearchBar from './components/searchBar.jsx';
 
 function App() {
   return (
     <Router>
       <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
         <Navbar />
+       <SearchBar/>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/collection' element={<Collection />} />
