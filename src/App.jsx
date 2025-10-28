@@ -12,7 +12,7 @@ import Collection from './pages/Collection';
 import Contact from './pages/Contact.jsx'; 
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';
-import SearchBar from './components/searchBar.jsx';
+import SearchBar from './components/SearchBar.jsx';
 
 function App() {
   return (
