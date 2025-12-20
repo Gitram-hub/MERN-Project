@@ -11,14 +11,14 @@ dist
 dist-ssr
 *.local
 
-# Environment variables
+o
 *.env
 .env
 admin/.env
 backend/.env
 frontend/.env
 
-# Editor directories and files
+
 .vscode/*
 !.vscode/extensions.json
 .idea
