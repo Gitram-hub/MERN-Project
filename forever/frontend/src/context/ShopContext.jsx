@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-// import { products } from "../assets/assets";
+import { assets,products } from "../assets/assets";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
@@ -12,9 +12,11 @@ const ShopContextProvider = ({ children }) => {
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
   const [cartItems, setCartItems] = useState({});
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
   const [token, setToken] = useState("");
   const navigate = useNavigate();
+    console.log(assets);
+    console.log(products);
 
   const addToCart = async (itemId, size) => {
     let cartData = structuredClone(cartItems);
@@ -105,6 +107,7 @@ const ShopContextProvider = ({ children }) => {
   // useEffect(() => {
   //   console.log(cartItems);
   // }, [cartItems]);
+
 
   const getCartCount = () => {
     let count = 0;
